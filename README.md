@@ -3,8 +3,8 @@ This web application utilizes Node and Express to create a simple server applica
 ## Goal
 Create a server application using Node, Express, and a View Engine.
 ## Technologies
-Node JS
-Express
-Nodemon for running the application
-Middlewares
-Pug View Engine
+- Node JS
+- Express
+- Nodemon for running the application
+- Middlewares
+- Pug View Engine
