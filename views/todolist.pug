@@ -1,0 +1,67 @@
+doctype html 
+html 
+    head 
+        title="To Do List"
+        style.
+            body{
+                background-color: beige;
+                text-align: center;
+                padding: 2rem;
+                display: block;
+                  margin: 0 auto;
+                  font-size: xx-large;
+            }
+            a{
+            }
+            input{
+                background-color: bisque;
+                width: 15%;
+                height: 45px;
+                margin-bottom: 20px;
+                align-items: center;
+                font-size: large;
+                margin-right: 2rem;
+            }
+            button{
+                cursor: text;
+                border-radius: 12px;
+                padding-left: 20px;
+                width: 10%;
+                height: 45px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 2px solid black;
+                padding: 10px;
+                text-align: center;
+            }
+            a{
+                border: 2px solid black;
+                text-decoration: none;
+                background-color: bisque;
+            }
+    body 
+        h1 To Do List for #{user.username}
+        h2 
+            a(href='/') Home
+        form(action=`/users/${user.username}/newitem`, method='POST')
+            input(type='text', name='titleOfTask', placeholder='Task Title', required)
+            input(type = 'text', name='description', placeholder='What Must Be Done', required)
+            button(type='submit') Add To List 
+        table 
+            thead
+                tr 
+                    th Title of Task 
+                    th Description 
+                    th Remove Button
+            tbody
+                each task, i in user.todo 
+                    tr
+                        td #{task.titleOfTask}
+                        td #{task.description} 
+                        td 
+                            form(action=`/users/${user.username}/deleteitem`, method='POST')
+                                button(type='submit') Delete
