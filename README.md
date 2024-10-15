@@ -8,6 +8,3 @@ Express
 Nodemon for running the application
 Middlewares
 Pug View Engine
-## Link
-https://bookwormreact.netlify.app/
-
